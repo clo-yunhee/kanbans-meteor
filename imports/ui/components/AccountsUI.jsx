@@ -46,30 +46,36 @@ class AccountsUI extends Component {
 
     return (
       <form className="wrapper-auth" onSubmit={this.onSubmit.bind(this)}>
-        <p className="subtitle-auth">
-          Having an account lets you see and manage private boards.
-        </p>
-        <input
-          className={`input-symbol ${errorClass('username')}`}
-          type="text"
-          name="username"
-          ref="username"
-          placeholder="Username"
-        />
-        <input
-          className={`input-symbol ${errorClass('password')}`}
-          type="password"
-          name="password"
-          ref="password"
-          placeholder="Password"
-        />
-        <button type="submit" className="btn-primary">
-          Sign in
-        </button>
-        {errors.none && <span className="text-error">{errors.none}</span>}
-        <a href="#" className="link-auth-alt">
-          Need an account? Join Now.
-        </a>
+        <header className="header-auth">
+          <p className="subtitle-auth">
+            Having an account lets you see and manage private boards.
+          </p>
+        </header>
+        <div className="controls-auth">
+          <input
+            className={`input-symbol ${errorClass('username')}`}
+            type="text"
+            name="username"
+            ref="username"
+            placeholder="Username"
+          />
+          <input
+            className={`input-symbol ${errorClass('password')}`}
+            type="password"
+            name="password"
+            ref="password"
+            placeholder="Password"
+          />
+          <button type="submit" className="btn-primary">
+            Sign in
+          </button>
+        </div>
+        <footer className="footer-auth">
+          {errors.none && <span className="text-error">{errors.none}</span>}
+          <a href="#" className="link-auth-alt">
+            Need an account? Join Now.
+          </a>
+        </footer>
       </form>
     )
   }

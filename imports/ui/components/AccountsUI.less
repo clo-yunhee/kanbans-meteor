@@ -1,8 +1,4 @@
 .wrapper-auth {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   background-color: #f091f0;
 
   border-radius: 4px;
@@ -17,57 +13,74 @@
 
   user-select: none;
 
-  .subtitle-auth {
-    font-size: 0.9rem;
-    color: #282c34;
-    margin: 5px 5px 20px;
-  }
+  .header-auth {
+    width: 22ch;
 
-  .input-symbol,
-  .btn-primary {
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    padding: 5px;
-
-    &:hover {
-      background-color: #eeeafc;
+    .subtitle-auth {
+      width: 100%;
+      margin: 5px 5px 20px;
+      font-size: 0.8rem;
+      color: #282c34;
     }
   }
 
-  .btn-primary {
-    margin-bottom: 10px;
-    width: 90%;
-    font-size: 0.9rem;
-    transition: transform ease 0.05s;
+  .controls-auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    &:active {
-      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
-      transform: translateY(2px);
+    .input-symbol,
+    .btn-primary {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      padding: 5px;
+
+      &:hover {
+        background-color: #eeeafc;
+      }
+    }
+
+    .btn-primary {
+      margin-bottom: 10px;
+      width: 90%;
+      font-size: 0.9rem;
+      transition: transform ease 0.05s;
+
+      &:active {
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+        transform: translateY(2px);
+      }
+    }
+
+    .input-error:not(:focus):not(:hover) {
+      box-shadow: 0 0 3px 2px #ff3d38;
+      background: #ffb7c6;
     }
   }
 
-  .link-auth-alt {
-    font-size: 0.8rem;
-    position: relative;
-    bottom: 0;
-    margin-top: 10px;
+  .footer-auth {
+    width: 22ch;
 
-    color: #282c34;
-    display: inline-block;
-  }
+    .text-error {
+      width: 100%;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: #ff2728;
+    }
 
-  .input-error:not(:focus):not(:hover) {
-    box-shadow: 0 0 3px 2px #ff3d38;
-    background: #ffb7c6;
-  }
+    .link-auth-alt {
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      bottom: 0;
+      margin-top: 10px;
+      font-size: 0.8rem;
 
-  .text-error {
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    color: #ff2728;
+      color: #282c34;
+    }
   }
 }
